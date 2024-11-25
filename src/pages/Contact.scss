@@ -1,0 +1,136 @@
+.form-container {
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the form */
+    display: flex;
+    border-radius: 20px; /* More rounded corners */
+    background-color: #fff; /* White background */
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    position: absolute; /* Position the form */
+    top: 50%; /* Move to the middle */
+    left: 50%; /* Move to the middle */
+    transform: translate(-50%, -50%); /* Adjust centering */
+  }
+  
+
+.test{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  .content {
+    flex: 1; /* Expands to take up available space, pushing the footer down */
+  }
+  
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 450px;
+    
+}
+
+.group{
+    position: relative;
+}
+
+.form .group .label {
+    font-size: 14px;
+    color: rgb(99, 102, 102);
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    transition: all .3s ease;
+  }
+
+  .form .group .input,
+  .form .group .textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    outline: 0;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .form .group .input:not(placeholder-shown) + .label, .form .group .textarea:not(placeholder-shown) + .label {
+    top: 10px;
+    background-color: transparent;
+  }
+
+
+.form .group .input.has-content + .label,
+.form .group .textarea.has-content + .label {
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #3366cc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group .input.has-content,
+.form .group .textarea.has-content {
+  border-color: #3366cc; /* Optional: if you want the border color to persist */
+}
+  .form .group .input:focus,
+  .form .group .textarea:focus {
+    border-color: #3366cc;
+  }
+
+  .form .group .input:focus + .label, .form .group .textarea:focus + .label {
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    color: #3366cc;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .form .group .textarea {
+    resize: none;
+   
+  }
+
+.input,
+.textarea {
+   
+    padding: 5px;
+    font-size: 14px;
+}
+
+.contactbutton{
+    background-color: #3366cc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    max-width: 400px;
+    align-self: center;
+    width: 100%;
+
+    
+}
+
+.contactbutton:hover{
+    
+        background-color: #27408b;
+}
+
+span{
+    color:red;
+}

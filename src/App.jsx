@@ -6,7 +6,7 @@ import { Navbar } from "./Components/Navbar";
 
 const App = () => {
   return(
-    <main className="bg-slate-300/20">
+    <section className="bg-slate-300">
       <Router>
         <Navbar/>
         <Routes>
@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </Router>
-    </main>
+    </section>
   )
 }
 

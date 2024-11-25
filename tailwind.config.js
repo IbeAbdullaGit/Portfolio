@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio:{
+        '16/9': '7.5/3',
+        '0' : '500/3'
+      },
+    },
   },
-  plugins: [],
+  plugins: [[require('@tailwindcss/aspect-ratio')]],
 }
