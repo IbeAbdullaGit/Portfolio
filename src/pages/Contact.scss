@@ -17,8 +17,7 @@
   
 
 .test{
-    margin-bottom: 30px;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .page-container {
     display: flex;
@@ -134,3 +133,34 @@
 span{
     color:red;
 }
+
+
+.form-container {
+  margin-bottom: 30px; /* To add space between the form and LinkedIn link */
+}
+
+.social-link {
+  margin-top: 20px;
+  text-align: center;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  a {
+    display: inline-block;
+    color: #0077b5; /* LinkedIn color */
+    
+
+    &:hover {
+      color: #005582;
+    }
+
+    svg {
+      transition: color 0.3s ease;
+     
+    }
+  }
+}
+

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Contact.scss";
 import emailjs from '@emailjs/browser';
-
+import { FaLinkedin } from 'react-icons/fa';
 
 
 const Contact = () => {
@@ -52,7 +52,7 @@ const Contact = () => {
       <div className="content">
        
         <section className="form-container">
-          <h2 className="">Contact us</h2>
+          <h2 className="test">Contact Me</h2>
 
           <form className="form" onSubmit={handleSubmit}>
             <div className="group">
@@ -110,8 +110,18 @@ const Contact = () => {
             <br></br>
             <button className="contactbutton" type="submit"> Submit </button>
           </form>
+
+          <div className="social-link">
+          <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/ibeabdulla/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={30} className="-mb-2"/>
+          </a></p>
+          
+        </div>
         </section>
+        
+
       </div>
+      
     </div>
   );
 };

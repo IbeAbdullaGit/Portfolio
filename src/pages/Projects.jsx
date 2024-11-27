@@ -34,7 +34,7 @@ const Projects = () => {
   ];
 
   return (
-    <section className="h-screen flex items-center justify-center bg-slate-300 text-center">
+    <section className=" h-screen flex items-center justify-center bg-slate-300 text-center sm:min-h-screen">
       <div className="w-11/12 md:w-3/4 relative bg-white rounded-lg shadow-lg p-10">
         {/* Custom Navigation Arrows */}
         <div className="swiper-button-prev top-1/2 -left-15 transform -translate-y-1 bg-gray-700 text-white p-6 rounded-full cursor-pointer"></div>
@@ -50,14 +50,15 @@ const Projects = () => {
           pagination={{ clickable: true }}
           spaceBetween={50} // Adjust spacing between slides
           slidesPerView={1}
+          autoHeight={true}
           className="relative"
         >
           {projects.map((project, index) => (
             <SwiperSlide key={index} className="p-6">
-              <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+              <h2 className=" sm:text-lg md:text-2xl font-bold mb-4">{project.title}</h2>
 
               {/* Screenshots - Flexbox for side-by-side display with different image sizes */}
-              <div className="flex gap-2 p-2 mb-4 justify-center">
+              <div className="flex sm:flex-wrap md:flex-nowrap gap-2 p-2 mb-4 justify-center">
                 {project.screenshots && project.screenshots.map((screenshot, idx) => (
                   <img
                     key={idx}
@@ -70,7 +71,7 @@ const Projects = () => {
 
               {/* YouTube Video */}
               {project.video && project.video.trim() !== "" ? (
-                <div className='aspect-16/9 p-5'>
+                <div className='aspect-16/9 sm:w-full p-5 sm:p-2'>
                   <iframe
                     src={project.video}
                     title={`Video for ${project.title}`}
@@ -84,7 +85,7 @@ const Projects = () => {
               )}
 
               {/* Description */}
-              <p className="mb-4 text-lg leading-relaxed">{project.description}</p>
+              <p className="mb-2 text-lg leading-relaxed">{project.description}</p>
 
               {/* Project Link */}
               {project.link && (
