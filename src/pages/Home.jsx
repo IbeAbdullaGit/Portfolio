@@ -14,8 +14,11 @@ const Home = () => {
         My lifelong love for technology has driven me to explore and excel in the tech industry. 
         I graduated from Ontario Tech University, specializing in Game Development and Entrepreneurship. 
         I have worked on diverse projects and gained invaluable experience as Unity Game Developer Intern at Gaggle Studios, 
-        where I created innovative solutions in Unity. I thrive on tackling complex challenges and delivering impactful results, 
-        and I am eager to bring my skills to any team.
+        where I created innovative solutions in Unity. thrive on tackling complex challenges and delivering impactful results.
+         My skills include proficiency in programming languages such as JavaScript, React, TailwindCSS, C++, C#, and Python, and I am always eager to learn more.
+          Additionally, I have hands-on experience with Unity, as well as level design and game design expertise. 
+          I am also familiar with project management tools like Jira and Trello, and community collaboration tools. 
+          I am committed to continuously improving and applying my skills to contribute to successful projects.
       </p>
     </section>
   );

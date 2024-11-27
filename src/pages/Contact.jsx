@@ -111,8 +111,8 @@ const Contact = () => {
             <button className="contactbutton" type="submit"> Submit </button>
           </form>
 
-          <div className="social-link">
-          <p>Connect with me on LinkedIn: <a href="https://www.linkedin.com/in/ibeabdulla/" target="_blank" rel="noopener noreferrer">
+          <div className="mt-5 text-center">
+          <p className="mb-[10px] text-xl">Connect with me on LinkedIn: <a className="inline-block text-[#0077b5] hover:text-[#005582] transition-colors duration-300 ease-in-out" href="https://www.linkedin.com/in/ibeabdulla/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} className="-mb-2"/>
           </a></p>
           
