@@ -28,15 +28,15 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_111kywo', 'template_axsfne4', e.target, 'cq6wOTOeQXQ1nH7ry')
+    emailjs.sendForm('service_1owea1n', 'template_97l6nrg', e.target, 'AZ3S3QuKdIOWJv1gq')
     .then((result) => {
         console.log(result.text);
         alert("Sent to owner");
         setFormData(
           {
-            name: "",
-            email: "",
-            message: "",
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
           }
         )
     }, (error) => {
