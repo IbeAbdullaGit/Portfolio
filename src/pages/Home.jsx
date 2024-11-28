@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <section className="h-screen flex flex-col items-center justify-center bg-slate-300 text-center px-6 md:px-12">
       <img
-        src="assets/Abdu.jpg"
+        src="Portfolio/assets/Abdu.jpg"
         alt="Abdalla Mohamed"
         className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mb-4 sm:mb-6 shadow-lg"
       />
