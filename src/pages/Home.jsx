@@ -10,15 +10,14 @@ const Home = () => {
       />
       <h1 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">Hi, I'm Abdalla Mohamed</h1>
       <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl sm:max-w-5xl">
-        I am a passionate Developer and Designer with Egyptian roots, based in Toronto, Canada. 
-        My lifelong love for technology has driven me to explore and excel in the tech industry. 
-        I graduated from Ontario Tech University, specializing in Game Development and Entrepreneurship. 
-        I have worked on diverse projects and gained invaluable experience as Unity Game Developer Intern at Gaggle Studios, 
-        where I created innovative solutions in Unity. thrive on tackling complex challenges and delivering impactful results.
-         My skills include proficiency in programming languages such as JavaScript, React, TailwindCSS, C++, C#, and Python, and I am always eager to learn more.
-          Additionally, I have hands-on experience with Unity, as well as level design and game design expertise. 
-          I am also familiar with project management tools like Jira and Trello, and community collaboration tools. 
-          I am committed to continuously improving and applying my skills to contribute to successful projects.
+      I am an Egyptian Developer and Designer located in Toronto, Canada, with a lifelong passion for technology driving me to explore the industry.
+
+Graduating from Ontario Tech University, I specialized in Game Development and Entrepreneurship, and have been working on multiple diverse projects over the course of nearly half a decade. I've gained experience working at Gaggle Studios as a Unity Game Developer creating innovative solutions in Unity for Multiplayer and Gameplay functionality. 
+
+I thrive on tackling complex challenges and delivering impactful results, with my skills including proficiency with programming languages such as JavaScript, React, TailwindCSS, C++, C#, as well as Python. I am always eager to learn more; additionally, I've worked within the Unity Game Engine, and have developed my knowledge of both game and level design. I am also familiar with project management tools like Jira and Trello, and community collaboration tools. 
+
+I am committed to constantly expanding upon my skillset and my knowledge through my work on my projects, and I look forward to future opportunities to continue doing so.
+
       </p>
     </section>
   );
