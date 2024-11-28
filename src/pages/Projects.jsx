@@ -9,7 +9,7 @@ const Projects = () => {
   const projects = [
     {
         title: 'Spin Critters',
-        screenshots: [ '/src/assets/SpinCritters.gif','/src/assets/SpinCritters-1.png','/src/assets/SpinCritters-2.png'],
+        screenshots: [ 'Portfolio/assets/SpinCritters.gif','Portfolio/assets/SpinCritters-1.png','Portfolio/assets/SpinCritters-2.png'],
         description: 'During my time at Gaggle, I contributed to the development of multiplayer functionality, specifically working on the matchmaking system that allows up to 8 players to join the same lobby, as well as matching them before each battle. Additionally, I was responsible for programming the unit selection and combat logic, a slot-machine determined the unites that will fight in the upcoming battle and the logic ensured that the game could logically determine the winner based on the units abilities and attributes. The project was done in Unity',
       },
     {
