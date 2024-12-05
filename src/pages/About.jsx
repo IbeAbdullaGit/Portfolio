@@ -7,7 +7,7 @@ const About = () => {
     <h1 className="text-4xl font-bold mb-6 sm:mt-6">About Me</h1>
   
     <div className="max-w-xl sm:max-w-5xl">
-      <div className="mb-8">
+      <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-800 mb-2">Summary</h2>
         <p className="text-lg sm:text-xl text-gray-700 ">
           I'm Abdalla Mohamed, a Developer and Designer with Egyptian roots, currently based in Toronto, Canada. 
@@ -16,7 +16,7 @@ const About = () => {
         </p>
       </div>
   
-      <div className="mb-8 sm:mb-4">
+      <div className="mb-6 sm:mb-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-2">Currently Working On</h2>
         <p className="text-lg sm:text-xl text-gray-700 ">
           Currently, I'm working on improving my skills in game development, design, and full-stack web development. 
@@ -25,7 +25,7 @@ const About = () => {
         </p>
       </div>
   
-      <div className="mb-8 sm:mb-4">
+      <div className="mb-6 sm:mb-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-2">Interests</h2>
         <p className="text-lg sm:text-xl text-gray-700 ">
           In my free time, I enjoy exploring new technologies, reading books to expand my knowledge, and watching shows, and movies. 
