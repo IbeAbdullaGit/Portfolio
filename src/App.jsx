@@ -7,7 +7,7 @@ import { Navbar } from "./components/Navbar";
 const App = () => {
   return(
     <section className="bg-slate-300">
-      <Router>
+      <Router basename="/Portfolio">
         <Navbar/>
         <Routes>
           <Route path="/Portfolio/" element={<Home/>}/>
