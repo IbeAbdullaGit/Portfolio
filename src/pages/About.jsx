@@ -35,8 +35,8 @@ const About = () => {
   
       </div>
 
-      <div className="mt-5 text-center">
-          <p className="mb-[10px] text-xl">Connect with me on LinkedIn: <a className="inline-block text-[#0077b5] hover:text-[#005582] transition-colors duration-300 ease-in-out" href="https://www.linkedin.com/in/ibeabdulla/" target="_blank" rel="noopener noreferrer">
+      <div className="text-center">
+          <p className="text-xl">Connect with me on LinkedIn: <a className="inline-block text-[#0077b5] hover:text-[#005582] transition-colors duration-300 ease-in-out" href="https://www.linkedin.com/in/ibeabdulla/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin size={30} className="-mb-2"/>
           </a></p>
           
