@@ -6,7 +6,7 @@ const About = () => {
     <section className="h-screen flex flex-col items-center justify-center bg-slate-300 text-center  ">
     <h1 className="text-4xl font-bold mb-6 sm:mt-6">About Me</h1>
   
-    <div className="max-w-xl sm:max-w">
+    <div className="max-w-xl sm:max-w-sm">
       <div className="mb-6">
         <h2 className="text-2xl font-semibold text-gray-800 mb-2">Summary</h2>
         <p className="text-lg sm:text-xl text-gray-700 ">
