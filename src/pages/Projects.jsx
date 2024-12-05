@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect,useRef} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Projects = () => {
+
   const projects = [
     {
         title: 'Spin Critters',
@@ -32,6 +33,30 @@ const Projects = () => {
     },
    
   ];
+
+  // Function to stop videos
+  const stopVideos = () => {
+    const iframes = document.querySelectorAll('.swiper-slide iframe');
+    iframes.forEach((iframe) => {
+      iframe.contentWindow.postMessage(
+        JSON.stringify({ event: 'command', func: 'pauseVideo' }),
+        '*'
+      );
+    });
+  };
+
+  useEffect(() => {
+    const swiper = document.querySelector('.swiper').swiper;
+
+    // Listen for slide change
+    swiper.on('slideChange', () => {
+      stopVideos(); // Stop any video playing in the previous slide
+    });
+
+    return () => {
+      swiper.off('slideChange', stopVideos); // Clean up event listener on unmount
+    };
+  }, []);
 
   return (
     <section className=" h-screen flex items-center justify-center bg-slate-300 text-center sm:min-h-screen">

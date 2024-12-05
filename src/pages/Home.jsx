@@ -10,7 +10,7 @@ const Home = () => {
       />
       <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 lg:mb-8">Hi, I'm Abdalla Mohamed</h1>
       <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed max-w-xl sm:max-w-5xl">
-      I am an Egyptian Developer and Designer located in Toronto, Canada, with a lifelong passion for technology driving me to explore the industry.
+      I am an Canadian Developer and Designer, with a lifelong passion for technology driving me to explore the industry.
 
 Graduating from Ontario Tech University, I specialized in Game Development and Entrepreneurship, and have been working on multiple diverse projects over the course of nearly half a decade. I've gained experience working at Gaggle Studios as a Unity Game Developer creating innovative solutions in Unity for Multiplayer and Gameplay functionality. 
 
