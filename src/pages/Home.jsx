@@ -211,7 +211,7 @@ const Home = () => {
               <CarouselContent className="-ml-4">
                 {projects.map((project, index) => (
                   <CarouselItem key={index} className="pl-4">
-                    <div className="bg-white border border-[#242424]/20 rounded-xl shadow-xl p-4 px-12 md:p-8 h-full hover:shadow-[#933DC9]/20 hover:shadow-2xl hover:border-[#933DC9]/50 transition-all duration-300">
+                    <div className="bg-white border border-[#242424]/20 rounded-xl shadow-xl p-6 md:p-8 h-full hover:shadow-[#933DC9]/20 hover:shadow-2xl hover:border-[#933DC9]/50 transition-all duration-300">
                       <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-[#242424]">{project.title}</h3>
 
@@ -244,8 +244,8 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-10 md:-left-20 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#933DC9] text-[#FBFAEE] border-[#933DC9] hover:bg-[#53118F] hover:border-[#53118F] shadow-lg z-10" />
-              <CarouselNext className="absolute right-10 md:-right-20 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#933DC9] text-[#FBFAEE] border-[#933DC9] hover:bg-[#53118F] hover:border-[#53118F] shadow-lg z-10" />
+              <CarouselPrevious className="absolute md:-left-20 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#933DC9] text-[#FBFAEE] border-[#933DC9] hover:bg-[#53118F] hover:border-[#53118F] shadow-lg z-10" />
+              <CarouselNext className="absolute  md:-right-20 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#933DC9] text-[#FBFAEE] border-[#933DC9] hover:bg-[#53118F] hover:border-[#53118F] shadow-lg z-10" />
             </Carousel>
           </div>
         </div>
