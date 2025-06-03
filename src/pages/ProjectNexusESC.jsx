@@ -52,7 +52,7 @@ const ProjectNexusESC = () => {
                   I designed and developed puzzles for a cooperative game where one player acts as a hacker, manipulating the environment, while the other player, an infiltrator, stealths through enemies and solves puzzles.
                 </p>
                 <p className="text-[#242424]/85 text-lg leading-relaxed">
-                  The hacker helps by distracting enemies and unlocking paths. The game emphasizes teamwork and strategic collaboration. Additionally I did the level designs and implemented them. The Project was done in Unity.
+                  The hacker helps by distracting enemies and unlocking paths. The game emphasizes teamwork and strategic collaboration. Additionally I did the level designs and implemented them. The Project was developed in Unity.
                 </p>
               </div>
               

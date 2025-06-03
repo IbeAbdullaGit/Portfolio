@@ -18,7 +18,7 @@ const ProjectSpinCritters = () => {
           <h1 className="text-5xl md:text-6xl font-bold uppercase tracking-wider mb-6 text-[#FBFAEE]/90">Spin Critters</h1>
           <div className="mb-12">
             <p className="text-xl md:text-2xl text-[#FBFAEE]/75 max-w-3xl mx-auto leading-relaxed">
-              A multiplayer mobile game featuring matchmaking system and unit-selection combat logic determined by a slot machine mechanic.
+              An autobattler game featuring unit-selection combat logic determined by a slot machine mechanic.
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ const ProjectSpinCritters = () => {
               <div className="mb-12">
                 <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#242424]">Project Overview</h3>
                 <p className="text-[#242424]/85 text-lg mb-4 leading-relaxed">
-                  During my time at Gaggle, I contributed to the development of multiplayer functionality, specifically working on the matchmaking system that allows up to 8 players to join the same lobby, as well as matching them before each battle.
+                  During my time at Gaggle, I contributed to a prototype autobattler where players collect and evolve critters. I supported the development of netcode and matchmaking systems for up to 8 players.
                 </p>
                 <p className="text-[#242424]/85 text-lg leading-relaxed mb-4">
                   Additionally, I was responsible for programming the unit selection and combat logic. A slot-machine determined the units that will fight in the upcoming battle, and the logic ensured that the game could logically determine the winner based on the units' abilities and attributes.

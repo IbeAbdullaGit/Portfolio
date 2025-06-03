@@ -69,7 +69,7 @@ const Home = () => {
   const projects = [
     {
       title: 'Spin Critters',
-      description: 'During my time at Gaggle, I contributed to the development of multiplayer functionality, specifically working on the matchmaking system that allows up to 8 players to join the same lobby, as well as matching them before each battle.',
+      description: 'During my time at Gaggle, I contributed to a prototype autobattler where players collect and evolve critters. I implemented the combat logic, battle outcome calculations, and multiplayer matchmaking for up to 8 players.',
       technologies: ['Unity', 'C#', 'Multiplayer', 'Gameplay Systems', 'Matchmaking', 'Combat Logic'],
       slug: 'spin-critters'
     },
@@ -90,7 +90,7 @@ const Home = () => {
     {
       title: 'The Beyond',
       link: 'https://thevoidangel.itch.io/the-beyond',
-      description: 'A 2D platformer game, where the goal is to reach the highest point and combat obstacles on the way. I implemented the basic controls and laid out the levels for this project.',
+      description: 'A 2D platformer game, where the goal is to reach the highest point and combat obstacles on the way. I implemented the basic controls and the level design for this project.',
       technologies: ['OpenGL', 'C++', 'Custom Engine', 'Platformer', 'Level Design', 'Game Controls'],
       slug: 'the-beyond'
     },
@@ -103,7 +103,7 @@ const Home = () => {
         <div className="text-center text-[#FBFAEE]/95 max-w-4xl mx-auto px-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-wider mb-6 text-[#FBFAEE]/90">Hey, I'm Abdalla Mohamed</h1>
           <p className="text-lg sm:text-xl lg:text-2xl mb-10 max-w-3xl text-[#FBFAEE]/75 mx-auto">
-            I am an Canadian Developer and Designer, with a lifelong passion for technology driving me to explore the industry.
+            I am a Canadian Developer and Designer, with a lifelong passion for technology driving me to explore the industry.
           </p>
           <button 
             onClick={() => scrollToSection('projects')}
