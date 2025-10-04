@@ -3,13 +3,6 @@ import { Link } from 'react-router-dom';
 import './mouseScroll.css';
 import emailjs from '@emailjs/browser';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 
 const Home = () => {
   // State for contact form
@@ -66,35 +59,68 @@ const Home = () => {
     });
   };
 
+  const [activeFilter, setActiveFilter] = useState('all');
+
   const projects = [
+    {
+      title: 'Xelify - An Autopayroll Time Card Processor',
+      link: 'https://github.com/IbeAbdullaGit/Auto-Payroll',
+      description: 'I developed a comprehensive payroll automation system that streamlines time card processing for multiple companies. The application converts PDF time cards into Excel spreadsheets with intelligent break calculations, time rounding, and exception handling. I built a user-friendly GUI interface that supports multi-company configurations with custom rules for each organization.',
+      technologies: ['Python', 'PDF Processing', 'Excel Automation', 'GUI Development', 'Data Processing'],
+      slug: 'Xelify',
+      category: 'App'
+    },
     {
       title: 'Spin Critters',
       description: 'During my time at Gaggle, I contributed to a prototype autobattler where players collect and evolve critters. I implemented the combat logic, battle outcome calculations, and multiplayer matchmaking for up to 8 players.',
       technologies: ['Unity', 'C#', 'Multiplayer', 'Gameplay Systems', 'Matchmaking', 'Combat Logic'],
-      slug: 'spin-critters'
+      slug: 'spin-critters',
+      category: 'Game Dev'
     },
     {
       title: 'Nexus//ESC',
       link: 'https://carw.itch.io/nexusesccelbreak',
       description: 'I designed and developed puzzles for a cooperative game where one player acts as a hacker, manipulating the environment, while the other player, an infiltrator, stealths through enemies and solves puzzles.',
       technologies: ['Unity', 'C#', 'Level Design', 'Puzzle Design', 'Stealth Mechanics', 'Cooperative Gameplay'],
-      slug: 'nexus-esc'
+      slug: 'nexus-esc',
+      category: 'Game Dev'
     },
     {
       title: 'Rubbish Rush',
       link: 'https://thevoidangel.itch.io/rubbish-rush',
       description: 'A fast-paced game where you clear piles of rubbish by dragging them into the trash before time runs out. I designed the game, developed the core gameplay, created levels, and implemented custom effects.',
       technologies: ['OpenGL', 'C++', 'Custom Engine', 'Game Design', 'Level Design'],
-      slug: 'rubbish-rush'
+      slug: 'rubbish-rush',
+      category: 'Game Dev'
     },
     {
       title: 'The Beyond',
       link: 'https://thevoidangel.itch.io/the-beyond',
       description: 'A 2D platformer game, where the goal is to reach the highest point and combat obstacles on the way. I implemented the basic controls and the level design for this project.',
       technologies: ['OpenGL', 'C++', 'Custom Engine', 'Platformer', 'Level Design', 'Game Controls'],
-      slug: 'the-beyond'
+      slug: 'the-beyond',
+      category: 'Game Dev'
     },
+    // Example future projects with different categories
+    // {
+    //   title: 'E-commerce Website',
+    //   description: 'A modern e-commerce platform with payment integration.',
+    //   technologies: ['React', 'TailwindCSS', 'Stripe', 'Firebase'],
+    //   slug: 'ecommerce-site',
+    //   category: 'Web'
+    // }
   ];
+
+  const filterButtons = [
+    { id: 'all', label: 'All Projects' },
+    { id: 'Game Dev', label: 'Game Dev' },
+    { id: 'App', label: 'App' },
+    { id: 'Web', label: 'Web' }
+  ];
+
+  const filteredProjects = activeFilter === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
   
   return (
     <>
@@ -205,49 +231,88 @@ const Home = () => {
               Check out some of my recent work and personal projects
             </p>
           </div>
-          
-          <div className="w-full md:w-4/5 mx-auto relative">
-            <Carousel className="w-full">
-              <CarouselContent className="-ml-4">
-                {projects.map((project, index) => (
-                  <CarouselItem key={index} className="pl-4">
-                    <div className="bg-white border border-[#242424]/20 rounded-xl shadow-xl p-6 md:p-8 h-full hover:shadow-[#933DC9]/20 hover:shadow-2xl hover:border-[#933DC9]/50 transition-all duration-300">
-                      <div className="space-y-6">
-                        <h3 className="text-2xl font-bold text-[#242424]">{project.title}</h3>
 
-                        {/* Description */}
-                        <p className="text-[#242424]/85 text-lg leading-relaxed">{project.description}</p>
-                        
-                        {/* Technologies Used */}
-                        <div>
-                          <h4 className="text-xl font-semibold mb-4 text-[#242424]">Technologies Used</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {project.technologies.map((tech, idx) => (
-                              <span key={idx} className="px-4 py-2 bg-[#933DC9]/10 text-[#53118F] border border-[#933DC9]/30 rounded-full text-sm font-semibold">
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        {/* Project Buttons */}
-                        <div className="flex justify-center pt-4">
-                          <Link 
-                            to={`/Portfolio/project/${project.slug}`} 
-                            className="px-8 py-3 bg-[#933DC9] text-[#FBFAEE] uppercase font-bold tracking-wider rounded-lg shadow-lg hover:bg-[#53118F] transition-all duration-300 hover:transform hover:-translate-y-1"
-                          >
-                            Project Details
-                          </Link>
-                        </div>
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {filterButtons.map((button) => (
+              <button
+                key={button.id}
+                onClick={() => setActiveFilter(button.id)}
+                className={`px-6 py-3 rounded-lg font-semibold tracking-wider transition-all duration-300 uppercase ${
+                  activeFilter === button.id
+                    ? 'bg-[#933DC9] text-[#FBFAEE] shadow-lg transform -translate-y-1'
+                    : 'bg-white text-[#242424] border-2 border-[#933DC9] hover:bg-[#933DC9]/10 hover:border-[#53118F]'
+                }`}
+              >
+                {button.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Projects Grid */}
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+              {filteredProjects.map((project, index) => (
+                <div 
+                  key={index} 
+                  className="bg-white border border-[#242424]/20 rounded-xl shadow-xl p-6 hover:shadow-[#933DC9]/20 hover:shadow-2xl hover:border-[#933DC9]/50 transition-all duration-300 hover:transform hover:-translate-y-2 h-fit"
+                >
+                  <div className="space-y-6">
+                    {/* Project Header with Tag */}
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-2xl font-bold text-[#242424] flex-1 pr-4">{project.title}</h3>
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider whitespace-nowrap ${
+                        project.category === 'Game Dev' 
+                          ? 'bg-[#933DC9]/20 text-[#53118F] border border-[#933DC9]/40' 
+                          : project.category === 'App'
+                          ? 'bg-green-100 text-green-800'
+                          : 'bg-purple-100 text-purple-800'
+                      }`}>
+                        {project.category}
+                      </span>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-[#242424]/85 text-base leading-relaxed">{project.description}</p>
+                    
+                    {/* Technologies Used */}
+                    <div>
+                      <h4 className="text-lg font-semibold mb-3 text-[#242424]">Technologies Used</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech, idx) => (
+                          <span key={idx} className="px-3 py-1 bg-[#933DC9]/10 text-[#53118F] border border-[#933DC9]/30 rounded-full text-xs font-semibold">
+                            {tech}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="absolute -left-7 md:-left-20 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#933DC9] text-[#FBFAEE] border-[#933DC9] hover:bg-[#53118F] hover:border-[#53118F] shadow-lg z-10" />
-              <CarouselNext className="absolute -right-7 md:-right-20 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-[#933DC9] text-[#FBFAEE] border-[#933DC9] hover:bg-[#53118F] hover:border-[#53118F] shadow-lg z-10" />
-            </Carousel>
-          </div>
+                    
+                    {/* Project Button */}
+                    <div className="pt-4">
+                      <Link 
+                        to={`/Portfolio/project/${project.slug}`} 
+                        className="w-full block text-center px-6 py-3 bg-[#933DC9] text-[#FBFAEE] uppercase font-bold tracking-wider rounded-lg shadow-lg hover:bg-[#53118F] transition-all duration-300 hover:transform hover:-translate-y-1"
+                      >
+                        Project Details
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <div className="bg-white border border-[#242424]/20 rounded-xl shadow-xl p-12 max-w-md mx-auto">
+                <p className="text-[#242424]/60 text-lg mb-4">No projects found in this category.</p>
+                <button
+                  onClick={() => setActiveFilter('all')}
+                  className="px-6 py-3 bg-[#933DC9] text-[#FBFAEE] uppercase font-bold tracking-wider rounded-lg shadow-lg hover:bg-[#53118F] transition-colors duration-300"
+                >
+                  View All Projects
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 

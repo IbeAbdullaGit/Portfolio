@@ -6,3 +6,4 @@ export { default as ProjectNexusESC } from './ProjectNexusESC';
 export { default as ProjectSpinCritters } from './ProjectSpinCritters';
 export { default as ProjectTheBeyond } from './ProjectTheBeyond';
 export { default as ProjectRubbishRush } from './ProjectRubbishRush';
+export { default as ProjectXelify } from './ProjectXelify';
