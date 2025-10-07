@@ -37,15 +37,14 @@ const ProjectXelify = () => {
           <div className="mb-12">
             {/* Video Section - Placeholder for future video */}
             <div className="w-full mb-12">
-              <div className="aspect-video w-full bg-gradient-to-br from-[#933DC9]/20 to-[#53118F]/20 rounded-lg shadow-lg flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[#933DC9] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-[#FBFAEE]" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" />
-                    </svg>
-                  </div>
-                  <p className="text-[#242424]/60 text-lg font-semibold">Demo</p>
-                </div>
+              <div className="aspect-video w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/6PpK1JGxUJM?si=jcvoKA8T5XUHBwza"
+                  title="Video for Xelify"
+                  className="w-full h-full rounded-lg shadow-lg"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
             
