@@ -63,6 +63,20 @@ const Home = () => {
 
   const projects = [
     {
+      title: 'Board Game Designer',
+      description: 'A comprehensive board game design platform that combines project management features inspired by Codecks with visual prototyping tools inspired by Iterary. Built with Next.js 14, TypeScript, React, and ShadCN UI.',
+      technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'ShadCN UI', 'Prisma', 'Framer Motion', 'Project Management'],
+      slug: 'boardgame-designer',
+      category: 'Web'
+    },
+    {
+      title: 'WavesTD',
+      description: 'A roguelite developed in Unity featuring customizable boats. I implemented modular boat parts (plating/protection, speed, healing utilities, weapon slots), the weapon system, boat movement with angular drag, projectile systems, and ScriptableObject data structures.',
+      technologies: ['Unity', 'C#', 'ScriptableObjects', 'Game Systems', 'Physics', 'Object Pooling', 'Data-Driven Design'],
+      slug: 'waves-td',
+      category: 'Game Dev'
+    },
+    {
       title: 'Xelify - An Autopayroll Time Card Processor',
       link: 'https://github.com/IbeAbdullaGit/Auto-Payroll',
       description: 'I developed a comprehensive payroll automation system that streamlines time card processing for multiple companies. The application converts PDF time cards into Excel spreadsheets with intelligent break calculations, time rounding, and exception handling. I built a user-friendly GUI interface that supports multi-company configurations with custom rules for each organization.',
@@ -266,7 +280,7 @@ const Home = () => {
                           ? 'bg-[#933DC9]/20 text-[#53118F] border border-[#933DC9]/40' 
                           : project.category === 'App'
                           ? 'bg-green-100 text-green-800'
-                          : 'bg-purple-100 text-purple-800'
+                          : 'bg-blue-100 text-blue-800'
                       }`}>
                         {project.category}
                       </span>

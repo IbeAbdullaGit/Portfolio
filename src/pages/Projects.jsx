@@ -9,6 +9,15 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Board Game Designer',
+      description: 'A comprehensive board game design platform that combines project management features inspired by Codecks with visual prototyping tools inspired by Iterary. Built with Next.js 14, TypeScript, React, and ShadCN UI. This project is work in progress and developed by me.',
+      link: 'https://github.com/IbeAbdullaGit/BoardGame-Designer',
+    },
+    {
+      title: 'WavesTD',
+      description: 'A roguelite developed in Unity with customizable boats. I built the modular boat parts (plating/protection, speed, healing utilities, and weapon slots), the weapon framework, boat movement with angular drag, projectiles, and ScriptableObject data.',
+    },
+    {
         title: 'Spin Critters',
         screenshots: [ 'assets/SpinCritters.gif','assets/SpinCritters-1.png','assets/SpinCritters-2.png'],
         description: 'During my time at Gaggle, I contributed to the development of multiplayer functionality, specifically working on the matchmaking system that allows up to 8 players to join the same lobby, as well as matching them before each battle. Additionally, I was responsible for programming the unit selection and combat logic, a slot-machine determined the unites that will fight in the upcoming battle and the logic ensured that the game could logically determine the winner based on the units abilities and attributes. The project was done in Unity',
@@ -31,7 +40,6 @@ const Projects = () => {
       description: 'A 2D platformer game, where the goal is to reach the highest point and combat obstacles on the way. I implemented the basic controls and laid out the levels for this project. The Project was developed in a custom Engine using OPENGL and C++',
       video: 'https://www.youtube.com/embed/qBoKArjeRfM?si=sTxgN9u6oNCxi2UB'
     },
-   
   ];
 
   // Function to stop videos
