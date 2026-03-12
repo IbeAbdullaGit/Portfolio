@@ -63,10 +63,10 @@ const Home = () => {
 
   const projects = [
     {
-      title: 'Board Game Designer',
-      description: 'A comprehensive board game design platform that combines project management features inspired by Codecks with visual prototyping tools inspired by Iterary. Built with Next.js 14, TypeScript, React, and ShadCN UI.',
-      technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'ShadCN UI', 'Prisma', 'Framer Motion', 'Project Management'],
-      slug: 'boardgame-designer',
+      title: 'DYNCPAS Website',
+      description: 'A professional marketing website for a Toronto-based CPA firm. Features seven service pages, a consultation booking system with live time-slot scheduling, AWS Lambda + Zoho Calendar integration for automated calendar events, and SEO optimization.',
+      technologies: ['React 19', 'React Router', 'Vite', 'Tailwind CSS', 'Radix UI', 'AWS Amplify', 'AWS Lambda', 'Web3Forms'],
+      slug: 'dyncpa',
       category: 'Web'
     },
     {

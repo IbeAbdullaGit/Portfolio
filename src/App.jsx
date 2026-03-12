@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Home, ProjectNexusESC, ProjectSpinCritters,ProjectRubbishRush, ProjectTheBeyond, ProjectXelify, ProjectBoardGameDesigner, ProjectWavesTD} from "./pages";
+import { Home, ProjectNexusESC, ProjectSpinCritters,ProjectRubbishRush, ProjectTheBeyond, ProjectXelify, ProjectDYNCPA, ProjectWavesTD} from "./pages";
 import { Navbar } from "./components/Navbar";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/Portfolio/project/rubbish-rush" element={<ProjectRubbishRush/>}/>
           <Route path="/Portfolio/project/the-beyond" element={<ProjectTheBeyond/>}/>
           <Route path="/Portfolio/project/Xelify" element={<ProjectXelify/>}/>
-          <Route path="/Portfolio/project/boardgame-designer" element={<ProjectBoardGameDesigner/>}/>
+          <Route path="/Portfolio/project/dyncpa" element={<ProjectDYNCPA/>}/>
           <Route path="/Portfolio/project/waves-td" element={<ProjectWavesTD/>}/>
         </Routes>
       </Router>
