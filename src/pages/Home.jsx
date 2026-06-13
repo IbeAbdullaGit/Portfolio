@@ -304,7 +304,7 @@ const Home = () => {
                     {/* Project Button */}
                     <div className="pt-4">
                       <Link 
-                        to={`/Portfolio/project/${project.slug}`} 
+                        to={`/project/${project.slug}`} 
                         className="w-full block text-center px-6 py-3 bg-[#933DC9] text-[#FBFAEE] uppercase font-bold tracking-wider rounded-lg shadow-lg hover:bg-[#53118F] transition-all duration-300 hover:transform hover:-translate-y-1"
                       >
                         Project Details

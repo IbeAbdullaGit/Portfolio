@@ -16,8 +16,8 @@ export const Navbar = () => {
     setMobileMenuOpen(false);
   };
 
-  // Check if we're on the homepage
-  const isHomePage = location.pathname === '/Portfolio/' || location.pathname === '/Portfolio';
+  const isHomePage = location.pathname === '/' || location.pathname === ''
+  const is3DPage = location.pathname === '/3d'
 
   // Effect to handle hash navigation after page load
   useEffect(() => {
@@ -69,7 +69,7 @@ export const Navbar = () => {
       scrollToSection(e, sectionId);
     } else {
       // If on another page, navigate to homepage with hash
-      navigate(`/Portfolio/#${sectionId}`);
+      navigate(`/#${sectionId}`)
     }
   };
 
@@ -90,15 +90,15 @@ export const Navbar = () => {
       });
     } else {
       // Navigate to homepage without hash
-      navigate('/Portfolio/');
+      navigate('/')
     }
   };
 
   return (
     <header className="fixed w-full z-50 bg-white shadow-md font-red-hat">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between py-4">
-        <NavLink 
-          to="/Portfolio/" 
+        <NavLink
+          to="/"
           onClick={handleLogoClick} 
           className="flex items-center cursor-pointer text-gray-800 hover:text-purple-700 transition-colors duration-300"
         >
@@ -140,8 +140,17 @@ export const Navbar = () => {
               </a>
             </li>
             <li className="mx-1">
-              <a 
-                href="#contact" 
+              <NavLink
+                to={is3DPage ? '/' : '/3d'}
+                className="px-4 py-3 inline-block text-base font-semibold uppercase tracking-wider text-gray-700 hover:text-purple-600 transition-colors duration-300"
+                onClick={closeMenu}
+              >
+                {is3DPage ? '2D Portfolio' : '3D Experience'}
+              </NavLink>
+            </li>
+            <li className="mx-1">
+              <a
+                href="#contact"
                 onClick={(e) => navigateToSection(e, 'contact')}
                 className="px-4 py-3 inline-block text-base font-semibold  uppercase tracking-wider text-gray-700 hover:text-purple-600 transition-colors duration-300">
                 Contact
@@ -187,9 +196,18 @@ export const Navbar = () => {
               Projects
             </a>
           </li>
+          <li className="border-b border-gray-200">
+            <NavLink
+              to={is3DPage ? '/' : '/3d'}
+              onClick={closeMenu}
+              className="block py-3 px-6 text-right font-medium uppercase text-gray-700 hover:text-purple-600 tracking-wide"
+            >
+              {is3DPage ? '2D Portfolio' : '3D Experience'}
+            </NavLink>
+          </li>
           <li>
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={(e) => navigateToSection(e, 'contact')}
               className="block py-3 px-6 text-right font-medium uppercase text-gray-700 hover:text-purple-600 tracking-wide">
               Contact

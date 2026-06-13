@@ -6,3 +6,4 @@ export { default as ProjectRubbishRush } from './ProjectRubbishRush';
 export { default as ProjectXelify } from './ProjectXelify';
 export { default as ProjectDYNCPA } from './ProjectDYNCPA';
 export { default as ProjectWavesTD } from './ProjectWavesTD';
+export { default as ProjectRAFrontend } from './ProjectRAFrontend';
